@@ -17,4 +17,6 @@ function getVideo() {
   
 }
 
+console.log('Before getVideo() function');
+
 getVideo();

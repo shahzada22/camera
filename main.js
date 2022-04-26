@@ -5,18 +5,24 @@ const ctx = canvas.getContext('2d');
 const video = document.getElementById('video');
 
 function getVideo() {
-  
-  navigator.mediaDevices.getUserMedia({video:true,audio:false})
-  
-  .then(localMediaStream=>{
-    
-    video.src = window.URL.createObjectURL(localMediaStream);
-    video.play();
-    
-  })
-  
+
+  navigator.mediaDevices.getUserMedia({
+      video: true
+    })
+
+    .then(localMediaStream => {
+      
+
+      video.srcObject = localMediaStream;
+      
+      video.play();
+
+    })
+    .catch(err=>{
+      console.log('Oh No!',err);
+    });
+
 }
 
-console.log('Before getVideo() function');
 
 getVideo();

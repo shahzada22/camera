@@ -5,5 +5,13 @@ const ctx = canvas.getContext('2d');
 const video = document.getElementById('video');
 
 function getVideo() {
-  console.log('Hello');
+  
+  navigator.mediaDevices.getUserMedia({video:true,audio:false})
+  
+  .then(localMediaStream=>{
+    
+    console.log(localMediaStream);
+    
+  })
+  
 }

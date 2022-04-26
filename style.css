@@ -1,16 +1,17 @@
-body{
+/*body{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+}*/
 h1{
   text-align: center;
 }
-
+/*
 canvas,video{
   width: 240px;
   height: 240px;
   border: 1px solid black;
   margin-bottom: 5px;
 }
+*/
